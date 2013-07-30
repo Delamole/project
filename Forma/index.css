@@ -1,0 +1,22 @@
+body{
+		font-family: "Arial";
+		font-size:90%;
+		position: relative;
+		top:30px;
+	}
+button{
+    cursor:pointer;
+	height:40px;
+    width:170px;
+    background-color:#FCC868;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FCC868, endColorstr=#FCF0A9);
+    background-image:-moz-linear-gradient(top, #FCC868 0%, #FCF0A9 50%, #FCC868 100%);
+    background-image:linear-gradient(top, #FCC868 0%, #FCF0A9 50%, #FCC868 100%);
+    background-image:-webkit-linear-gradient(top, #FCC868 0%, #FCF0A9 50%, #FCC868 100%);
+    background-image:-o-linear-gradient(top, #FCC868 0%, #FCF0A9 50%, #FCC868 100%);
+    background-image:-ms-linear-gradient(top, #FCC868 0%, #FCF0A9 50%, #FCC868 100%);
+    background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%, #FCC868), color-stop(50%, #FCF0A9), color-stop(100%, #FCC868));
+    border:3px double #fff;
+    border-radius:20px;
+    box-shadow:0 0 2px #ccc;
+	}

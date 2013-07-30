@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Школа разработки интерфейсов</title>
+<link rel="stylesheet" type="text/css" href="getforma.css">
+<link href="css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+<script type="text/javascript" src="ui.core.js"></script>
+<script type="text/javascript" src="ui/ui.progressbar.js"></script>
+<script type="text/javascript" src="getforma.js"></script>	   
+  </head>
+  <body>
+    <div class="form-container ui-helper-clearfix ui-corner-all">
+      <h1>Заполните анкету</h1>
+		<p>прогресс:</p>
+			<div id="progress"></div><label id="amount">0%</label>
+				<form name="contact_form" action="getforma.php" method="post" onsubmit="return validate_form ( );">
+					<div id="panel1" class="form-panel">
+						<h2>Ваши персональные данные</h2>
+							<fieldset class="ui-corner-all">
+				<div id="accordion"> 
+						<h3><a href="#">Вопрос 1</a></h3> 
+					<div> 
+						<label>Число,месяц и год рождения:</label> 
+						<textarea name="yeahrofbirth" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 2</a></h3> 
+					<div> 
+						<label>Город, в котором вы живёте:</label> 
+						<textarea name="city" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 3</a></h3> 
+					<div> 
+						<label>Вуз, факультет, специальность, кафедра:</label> 
+						<textarea name="vfsk" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 4</a></h3> 
+					<div> 
+						<label>Год окончания вуза:</label> <br>
+						<textarea name="yeahr" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div>
+						<h3><a href="#">Вопрос 5</a></h3> 
+					<div> 
+						<label>Уровень владения английским языком:</label>
+					<div>
+						<input type="checkbox" name="beginner"> Начальный<br>
+						<input type="checkbox" name="elementary"> Средний<br>
+						<input type="checkbox" name="intermediate"> Свободное владение
+					</div>
+				</div> 
+			</div> 
+		</fieldset>
+     </div>
+		<div id="panel2" class="form-panel ui-helper-hidden">
+			<h2>Ваши персональные данные</h2>
+				<fieldset class="ui-corner-all">
+				<div id="accordion1"> 
+						<h3><a href="#">Вопрос 6</a></h3> 
+					<div> 
+						<label>Чего вы ожидаете от участия в Школе?</label> 
+						<textarea name="school" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 7</a></h3> 
+					<div> 
+						<label>Откуда вы о нас узнали?</label> <br>
+						<textarea name="where" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 8</a></h3> 
+					<div> 
+						<label>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</label> 
+						<textarea name="time" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 9</a></h3> 
+					<div> 
+						<label>Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка:</label><br> 
+						<textarea name="experience" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 10</a></h3> 
+					<div> 
+						<label>Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде:</label><br> 
+						<textarea name="work" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+				</div> 
+           </fieldset>
+       </div>
+			<div id="panel3" class="form-panel ui-helper-hidden">
+				<h2>Ваши персональные данные</h2>
+				<fieldset class="ui-corner-all">
+				<div id="accordion2"> 
+						<h3><a href="#">Вопрос 11</a></h3> 
+					<div> 
+						<label>Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его:</label> 
+						<textarea name="programm" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 12</a></h3> 
+					<div> 
+						<label>Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью? С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?</label> <br>
+						<textarea name="cmd" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 13</a></h3> 
+					<div> 
+						<label>Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа: 4! + 0! + 5! + 8! + 5! = 40585<br>
+						В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net">http://jsfiddle.net/</a>с вашим кодом или на ваш репозиторий на <a href="https://github.com">https://github.com</a></label> <br>
+						<textarea name="factorion" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 14</a></h3> 
+					<div> 
+						<label>Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую.
+						Полное условие задачи доступно на <a href="https://github.com/yandex-shri/introtask-space">https://github.com/yandex-shri/introtask-space</a><br
+						В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net">http://jsfiddle.net/</a>с вашим кодом или на ваш репозиторий на <a href="https://github.com">https://github.com</a></label> 
+						<textarea name="pilot" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 
+						<h3><a href="#">Вопрос 15</a></h3> 
+					<div> 
+						<label>Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: MSIE (8, 9, 10), Google Chrome (26, 27), Firefox (20, 21), Opera (12.15, 12.14), Яндекс.Браузер 1.5. По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery.
+						Разработку необходимо вести на <a href="https://github.com">https://github.com</a>. В качестве ответа на вопрос пришлите ссылку на проект.</label> 
+						<textarea name="anketa" cols="90"  placeholder="Заполните поле!"></textarea>
+					</div> 	
+				</div> 
+			</fieldset>
+        </div>
+            <div id="thanks" class="form-panel ui-helper-hidden">
+              <h2>Расскажите немного о себе</h2>
+              <fieldset class="ui-corner-all">
+				<table border="0">
+					<tbody>
+					<tr>
+						<td>Резюме до 250 КБ </td><td><input type="file" name="Выберите файл" required></td>
+					</tr>
+					<tr>
+						<td>Ссылка на профиль в моем круге </td><td><input type="text" name="mypro" size="90"></td>
+					</tr>
+					<tr>
+						<td>Имя, Фамилия </td><td><input type="text" name="fio" size="90" required></td>
+					</tr>
+					<tr>
+						<td>Телефон </td><td><input type="text" name="phone" size="90"  placeholder="Например,+7903745хххх"></td>
+					</tr>
+					<tr>
+						<td>E-mail </td><td><input type="email" name="login" size="90" required></td>
+					</tr>
+					<tr>
+						<td>Дополнительные сведения  </td><td><textarea name="follow" cols="70"></textarea></td>
+					</tr>
+					</tbody>
+				</table>
+					<br>
+			<label>Откуда вы узнали о нашем предложении</label>			
+			<select name="choice" value="Выбрать">
+				<option value="s1">от HR-менеджера Яндекса</option>
+				<option value="s2">Я.Субботник</option>
+				<option value="s3">Yet another Conference</option>
+				<option value="s4">На другой конференции</option>
+				<option value="s3">Из поиска</option>
+				<option value="s3">По рекомендации</option>
+				<option value="s3">Другое</option>
+			</select>		
+					<div><input type="checkbox" name="a"> Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+					</div>
+				<div><input type="submit" class="submit" value="Отправить">
+				<input type="reset" class="reset" value="Очистить"></div>
+              </fieldset>
+            </div>
+				<button id="next">Next ></button><button id="back" disabled="disabled">< Back</button>
+         </form>
+      </div>
+  </body>
+</html>
